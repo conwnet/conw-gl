@@ -9,6 +9,11 @@ class Platform extends Permission {
     //Platfrom list
     public function manage()
     {
+        if(input('get.cate')) {
+            dump($_POST);
+            die();
+        }
+
         $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])->limit(10)->select();
         foreach ($data as $key => $value) {
             $data[$key] = $value->getData();
@@ -68,6 +73,7 @@ class Platform extends Permission {
         } else if($operation == 2) {
             $platform->save(['status' => 2]);
         } else if($operation == 3){
+            $platform->delete();
         }
         return true;
     }
