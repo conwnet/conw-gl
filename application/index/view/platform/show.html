@@ -62,9 +62,13 @@
 
 		<div class="row cl">
 			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>平台定位：</label>
-			<div class="formControls col-xs-2 col-sm-9">
+			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>平台定位：</label>
+			<div class="formControls col-xs-1 col-sm-4">
 				<input type="text" class="input-text" placeholder="" name="platform_positioning" value="<?php echo @$info['platform_positioning']; ?>">
+			</div>
+			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>获批时间：</label>
+			<div class="formControls col-xs-1 col-sm-4">
+				<input type="text" class="input-text" placeholder="" name="approval_time" value="<?php echo @$info['approval_time']; ?>">
 			</div>
 		</div>
 		<div class="row cl">
@@ -107,8 +111,8 @@
 			<div class="col-sm-9">
 				<div class="row cl">
 					<label class="form-label col-xs-1 col-sm-1">年份</label>
-					<label class="form-label col-xs-2 col-sm-2">863计划</label>
-					<label class="form-label col-xs-2 col-sm-2">973计划</label>
+					<label class="form-label col-xs-2 col-sm-2">国家高技术研究发展计划（863计划）</label>
+					<label class="form-label col-xs-2 col-sm-2">国家重点基础研究发展计划(973计划)</label>
 					<label class="form-label col-xs-2 col-sm-2">国家自然科学基金</label>
 					<label class="form-label col-xs-2 col-sm-2">国家科技支撑计划</label>
 					<label class="form-label col-xs-2 col-sm-2">国家社科基金</label>
@@ -907,6 +911,28 @@
 			</div>
 		</div>
 
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>省内成果转化情况</label>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<div class="formControls col-xs-10 col-sm-10">
+				<textarea class="textarea" placeholder="" name="platform_respo_prov_achi"><?php echo @$info['platform_respo_prov_achi']; ?></textarea>
+			</div>
+		</div>
+
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>拔尖人才培养情况：</label>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<div class="formControls col-xs-10 col-sm-10">
+				<textarea class="textarea" placeholder="" name="platform_respo_pers_nurt"><?php echo @$info['platform_respo_pers_nurt']; ?></textarea>
+			</div>
+		</div>
+
 		<h3>三、平台现有研究工作的基础、水平</h3>
 		<br /><hr />
 
@@ -930,16 +956,6 @@
 			<div class="col-xs-1 col-sm-1"></div>
 			<div class="formControls col-xs-10 col-sm-10">
 				<textarea class="textarea" placeholder="" name="hardware_condition"><?php echo @$info['hardware_condition']; ?></textarea>
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>方向带头人简介、代表性成果及其产生的经济社会效益：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="dir_person"><?php echo @$info['dir_person']; ?></textarea>
 			</div>
 		</div>
 
@@ -967,6 +983,16 @@
 
 		<h3>四、平台研究方向和主要研究内容</h3>
 		<br /><hr />
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>方向带头人简介、代表性成果及其产生的经济社会效益：</label>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-1 col-sm-1"></div>
+			<div class="formControls col-xs-10 col-sm-10">
+				<textarea class="textarea" placeholder="" name="dir_person"><?php echo @$info['dir_person']; ?></textarea>
+			</div>
+		</div>
 		<div class="row cl">
 			<div class="col-xs-1 col-sm-1"></div>
 			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台研究方向和主要研究内容：</label>

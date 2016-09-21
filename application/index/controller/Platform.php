@@ -9,12 +9,20 @@ class Platform extends Permission {
     //Platfrom list
     public function manage()
     {
-        if(input('get.cate')) {
-            dump($_POST);
-            die();
+        if(input('post.cate')) {
+            switch (input('post.cate')) {
+                case 1:
+                    $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
+                        ->where('platform_name', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
+                case 2:
+                    $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
+                        ->where('school_name', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
+                case 3: $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
+                        ->where('research_direction', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
+            }
+        } else {
+            $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])->limit(10)->select();
         }
-
-        $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])->limit(10)->select();
         foreach ($data as $key => $value) {
             $data[$key] = $value->getData();
             $user = model\User::get($value['submit_user_id']);
