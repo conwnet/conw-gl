@@ -19,6 +19,10 @@ class Platform extends Permission {
                         ->where('school_name', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
                 case 3: $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
                         ->where('research_direction', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
+                case 4: $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
+                    ->where('platform_respo', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
+                case 5: $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])
+                    ->where('platform_team', 'like', '%' . input('post.cvalue') . '%')->limit(10)->select(); break;
             }
         } else {
             $data = model\Platform::field(['id', 'platform_name', 'submit_user_id', 'update_time', 'status'])->limit(10)->select();

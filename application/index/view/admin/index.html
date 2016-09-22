@@ -76,7 +76,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 平台管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a _href="{:url('platform/manage')}" data-title="平台管理" href="javascript:void(0)">平台管理</a></li>
+					<li><a _href="{:url('platform/manage')}" id="platform_manage" data-title="平台管理" href="javascript:void(0)">平台管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -218,6 +218,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s)})();
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+	$(function() {
+		$("#platform_manage").click();
+	})
 </script>
 </body>
 </html>
