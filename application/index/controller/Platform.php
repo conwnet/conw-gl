@@ -66,7 +66,7 @@ class Platform extends Permission {
         if ($info != NULL) {
             $info = $info->getData();
             foreach($info as $key => $value) {
-                $data = json_decode($value);
+                $data = json_decode($value, true);
                 if ($data != NULL)
                     $info[$key] = $data;}
             $this->assign('id', $id);

@@ -52,7 +52,15 @@
 			<div class="col-xs-1 col-sm-1"></div>
 			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>平台类型：</label>
 			<div class="formControls col-xs-1 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="platform_type" value="<?php echo @$info['platform_type']; ?>">
+				<select class="input-text" name="platform_type">
+					<option value="0" <?php if(@$info['platform_type'] == 0) echo 'selected="selected"'; ?>>请选择平台类型</option>
+					<option value="1" <?php if(@$info['platform_type'] == 1) echo 'selected="selected"'; ?>>重点实验室</option>
+					<option value="2" <?php if(@$info['platform_type'] == 2) echo 'selected="selected"'; ?>>工程技术研究中心</option>
+					<option value="3" <?php if(@$info['platform_type'] == 3) echo 'selected="selected"'; ?>>工程研究中心</option>
+					<option value="4" <?php if(@$info['platform_type'] == 4) echo 'selected="selected"'; ?>>人文社会科学重点研究基地</option>
+					<option value="5" <?php if(@$info['platform_type'] == 5) echo 'selected="selected"'; ?>>区域战略研究基地</option>
+					<option value="6" <?php if(@$info['platform_type'] == 6) echo 'selected="selected"'; ?>>其它</option>
+				</select>
 			</div>
 			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>批准部门：</label>
 			<div class="formControls col-xs-1 col-sm-4">
@@ -84,7 +92,7 @@
 		</div>
 		<div class="row cl">
 			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>支撑省级以上学科名称：</label>
+			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>所属二级学科名称及代码：</label>
 			<div class="formControls col-xs-1 col-sm-4">
 				<input type="text" class="input-text" placeholder="" name="discipline" value="<?php echo @$info['discipline']; ?>">
 			</div>
@@ -116,7 +124,7 @@
 		<div class="rol cl">
 			<div class="col-xs-2 col-sm-1"></div>
 			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><br /><span class="c-red">*</span>承担国家课题（项）</label>
-			<div class="col-sm-9">
+			<div class="col-sm-9" id="nation_project">
 				<div class="row cl">
 					<label class="form-label col-xs-1 col-sm-1">年份</label>
 					<label class="form-label col-xs-2 col-sm-2">国家高技术研究发展计划（863计划）</label>
@@ -126,10 +134,9 @@
 					<label class="form-label col-xs-2 col-sm-2">国家社科基金</label>
 				</div>
 				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2010</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][0]" value="<?php echo @$info['nation_project'][0][0]; ?>">
-					</div>
+					<label class="form-label col-xs-1 col-sm-1">
+						<select class="list-year" name="nation_project[0][0]" id="nation_project0"></select>
+					</label>
 					<div class="formControls col-xs-2 col-sm-2">
 						<input type="text" class="input-text" placeholder="" name="nation_project[1][0]" value="<?php echo @$info['nation_project'][1][0]; ?>">
 					</div>
@@ -142,97 +149,39 @@
 					<div class="formControls col-xs-2 col-sm-2">
 						<input type="text" class="input-text" placeholder="" name="nation_project[4][0]" value="<?php echo @$info['nation_project'][4][0]; ?>">
 					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2011</label>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][1]" value="<?php echo @$info['nation_project'][0][1]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[5][0]" value="<?php echo @$info['nation_project'][5][0]; ?>">
 					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][1]" value="<?php echo @$info['nation_project'][1][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][1]" value="<?php echo @$info['nation_project'][2][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][1]" value="<?php echo @$info['nation_project'][3][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][1]" value="<?php echo @$info['nation_project'][4][1]; ?>">
+					<div class="formControls col-xs-1 col-sm-1">
+						<input type="button" class="btn btn-default" value="增加" onclick="add_nation_project()">
 					</div>
 				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2012</label>
+				<?php $first = 1; if(isset($info['nation_project'][0])) foreach($info['nation_project'][0] as $i => $value) { if($first) { $first = 0; continue; } ?>
+				<div class="row cl" id="nation_project_row<?php echo $i; ?>">
+					<label class="form-label col-xs-1 col-sm-1">
+						<select class="list-year" name="nation_project[0][<?php echo $i; ?>]" id="nation_project<?php echo $i; ?>"></select>
+					</label>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][2]" value="<?php echo @$info['nation_project'][0][2]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[1][<?php echo $i; ?>]" value="<?php echo @$info['nation_project'][1][$i]; ?>">
 					</div>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][2]" value="<?php echo @$info['nation_project'][1][2]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[2][<?php echo $i; ?>]" value="<?php echo @$info['nation_project'][2][$i]; ?>">
 					</div>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][2]" value="<?php echo @$info['nation_project'][2][2]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[3][<?php echo $i; ?>]" value="<?php echo @$info['nation_project'][3][$i]; ?>">
 					</div>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][2]" value="<?php echo @$info['nation_project'][3][2]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[4][<?php echo $i; ?>]" value="<?php echo @$info['nation_project'][4][$i]; ?>">
 					</div>
 					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][2]" value="<?php echo @$info['nation_project'][4][2]; ?>">
+						<input type="text" class="input-text" placeholder="" name="nation_project[5][<?php echo $i; ?>]" value="<?php echo @$info['nation_project'][5][$i]; ?>">
 					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2013</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][3]" value="<?php echo @$info['nation_project'][0][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][3]" value="<?php echo @$info['nation_project'][1][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][3]" value="<?php echo @$info['nation_project'][2][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][3]" value="<?php echo @$info['nation_project'][3][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][3]" value="<?php echo @$info['nation_project'][4][3]; ?>">
+					<div class="formControls col-xs-1 col-sm-1">
+						<input type="button" class="btn btn-danger" value="删除" onclick="remove_nation_project('nation_project_row<?php echo $i; ?>')">
 					</div>
 				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2014</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][4]" value="<?php echo @$info['nation_project'][0][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][4]" value="<?php echo @$info['nation_project'][1][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][4]" value="<?php echo @$info['nation_project'][2][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][4]" value="<?php echo @$info['nation_project'][3][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][4]" value="<?php echo @$info['nation_project'][4][4]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">合计</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][5]" value="<?php echo @$info['nation_project'][0][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][5]" value="<?php echo @$info['nation_project'][1][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][5]" value="<?php echo @$info['nation_project'][2][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][5]" value="<?php echo @$info['nation_project'][3][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][5]" value="<?php echo @$info['nation_project'][4][5]; ?>">
-					</div>
-				</div>
+				<?php } ?>
+
 			</div>
 		</div>
 		<br /><hr />
@@ -1582,7 +1531,35 @@ $(function(){
 
 	var ue = UE.getEditor('editor');
 
+
 });
+
+nation_project_count = <?php if(isset($info['nation_project'][0])) echo count($info['nation_project'][0]); else echo 1; ?>;
+function add_nation_project() {
+	$('#nation_project').append('<div class="row cl" id="nation_project_div' + nation_project_count +'"> <label class="form-label col-xs-1 col-sm-1"><select class="list-year" name="nation_project[0][' + nation_project_count + ']"></select></label> <div class="formControls col-xs-2 col-sm-2"> <input type="text" class="input-text" placeholder="" name="nation_project[1][' + nation_project_count + ']" value="' + "<?php echo @$info['nation_project'][1][' + nation_project_count + ']; ?>" + '"> </div> <div class="formControls col-xs-2 col-sm-2"> <input type="text" class="input-text" placeholder="" name="nation_project[2][' + nation_project_count +']" value="' + "<?php echo @$info['nation_project'][2][' + nation_project_count + ']; ?>" + '"> </div> <div class="formControls col-xs-2 col-sm-2"> <input type="text" class="input-text" placeholder="" name="nation_project[3][' + nation_project_count + ']" value="' + "<?php echo @$info['nation_project'][3][' + nation_project_count + ']; ?>" + '"> </div> <div class="formControls col-xs-2 col-sm-2"> <input type="text" class="input-text" placeholder="" name="nation_project[4][' + nation_project_count + ']" value="' + "<?php echo @$info['nation_project'][4][' + nation_project_count + ']; ?>" + '"> </div> <div class="formControls col-xs-2 col-sm-2"> <input type="text" class="input-text" placeholder="" name="nation_project[5][' + nation_project_count + ']" value="' + "<?php echo @$info['nation_project'][5][' + nation_project_count + ']; ?>" + '"></div><div class="formControls col-xs-1 col-sm-1"> <input type="button" class="btn btn-danger" value="删除" onclick="remove_nation_project(' + "'nation_project_row" + nation_project_count + "'" + ')"> </div></div>');
+	nation_project_count++;
+	list_year();
+}
+
+function remove_nation_project(div_id) {
+	document.getElementById(div_id).remove();
+}
+function list_year() {
+	var select = $('.list-year');
+	for(var i = 1900; i < 2050; i++) {
+		var option = document.createElement('option');
+		option.setAttribute('value', i);
+		option.innerHTML = i;
+		select.append(option);
+	}
+}
+list_year();
+
+
+<?php if(isset($info['nation_project'][0])) foreach($info['nation_project'][0] as $i => $value) { ?>
+	$("#nation_project<?php echo $i; ?>").find("option").eq(<?php echo @$info['nation_project'][0][$i]; ?> - 1900).attr("selected", "selected");
+<?php } ?>
+
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>
