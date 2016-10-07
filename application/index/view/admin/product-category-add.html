@@ -56,21 +56,21 @@
 <script type="text/javascript" src="../../../../public/static/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
 <script type="text/javascript">
 $(function(){
-	$('.skin-minimal input').iCheck({
-		checkboxClass: 'icheckbox-blue',
-		radioClass: 'iradio-blue',
-		increaseArea: '20%'
-	});
-	
-	$("#form-user-add").Validform({
-		tiptype:2,
-		callback:function(form){
-			form[0].submit();
-			var index = parent.layer.getFrameIndex(window.name);
-			parent.$('.btn-refresh').click();
-			parent.layer.close(index);
-		}
-	});
+    $('.skin-minimal input').iCheck({
+        checkboxClass: 'icheckbox-blue',
+        radioClass: 'iradio-blue',
+        increaseArea: '20%'
+    });
+    
+    $("#form-user-add").Validform({
+        tiptype:2,
+        callback:function(form){
+            form[0].submit();
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.$('.btn-refresh').click();
+            parent.layer.close(index);
+        }
+    });
 });
 </script>
 </body>

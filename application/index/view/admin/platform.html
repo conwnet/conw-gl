@@ -33,1392 +33,1392 @@
 <body>
 <h2 style="text-align: center">辽宁省高校重大科技平台申报书</h2>
 <article class="page-container">
-	<form method="post" class="form form-horizontal" action="{:url('platform/add'}">
-		<input type="hidden" name="id" value="<?php echo @$info['id']; ?>">
-		<h3>一、平台基本情况</h3>
-		<hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>平台名称：</label>
-			<div class="formControls col-xs-1 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="platform_name" value="<?php echo @$info['platform_name']; ?>">
-			</div>
-			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>学校名称：</label>
-			<div class="formControls col-xs-1 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="school_name" value="<?php echo @$info['school_name']; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>平台类型：</label>
-			<div class="formControls col-xs-1 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="platform_type" value="<?php echo @$info['platform_type']; ?>">
-			</div>
-			<label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>批准部门：</label>
-			<div class="formControls col-xs-1 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="approval_dept" value="<?php echo @$info['approval_dept']; ?>">
-			</div>
-		</div>
+    <form method="post" class="form form-horizontal" action="{:url('platform/add'}">
+        <input type="hidden" name="id" value="<?php echo @$info['id']; ?>">
+        <h3>一、平台基本情况</h3>
+        <hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>平台名称：</label>
+            <div class="formControls col-xs-1 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="platform_name" value="<?php echo @$info['platform_name']; ?>">
+            </div>
+            <label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>学校名称：</label>
+            <div class="formControls col-xs-1 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="school_name" value="<?php echo @$info['school_name']; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>平台类型：</label>
+            <div class="formControls col-xs-1 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="platform_type" value="<?php echo @$info['platform_type']; ?>">
+            </div>
+            <label class="form-label col-xs-2 col-sm-1"><span class="c-red">*</span>批准部门：</label>
+            <div class="formControls col-xs-1 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="approval_dept" value="<?php echo @$info['approval_dept']; ?>">
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>平台定位：</label>
-			<div class="formControls col-xs-2 col-sm-9">
-				<input type="text" class="input-text" placeholder="" name="platform_positioning" value="<?php echo @$info['platform_positioning']; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>研究方向：</label>
-			<div class="formControls col-xs-2 col-sm-9">
-				<input type="text" class="input-text" placeholder="" name="research_direction" value="<?php echo @$info['research_direction']; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>支撑省级以上学科名称：</label>
-			<div class="formControls col-xs-2 col-sm-9">
-				<input type="text" class="input-text" placeholder="" name="discipline" value="<?php echo @$info['discipline']; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-2 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>实验楼建筑面积（平方米）：</label>
-			<div class="formControls col-xs-2 col-sm-1">
-				<input type="text" class="input-text" placeholder="" name="building_area" value="<?php echo @$info['building_area']; ?>">
-			</div>
-			<label class="form-label col-xs-1 col-sm-2"><span class="c-red">*</span>单价十万元以上的仪器设备数量（台）：</label>
-			<div class="formControls col-xs-2 col-sm-1">
-				<input type="text" class="input-text" placeholder="" name="instrument_quantity" value="<?php echo @$info['instrument_quantity']; ?>">
-			</div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>先进仪器设备原值（万元）：</label>
-			<div class="formControls col-xs-2 col-sm-1">
-				<input type="text" class="input-text" placeholder="" name="equipment_value" value="<?php echo @$info['equipment_value']; ?>">
-			</div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>网站名称：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="site_name" value="<?php echo @$info['site_name']; ?>">
-			</div>
-		</div>
-		<br /><hr />
-		<div class="rol cl">
-			<div class="col-xs-2 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><br /><span class="c-red">*</span>承担国家课题（项）</label>
-			<div class="col-sm-9">
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">年份</label>
-					<label class="form-label col-xs-2 col-sm-2">863计划</label>
-					<label class="form-label col-xs-2 col-sm-2">973计划</label>
-					<label class="form-label col-xs-2 col-sm-2">国家自然科学基金</label>
-					<label class="form-label col-xs-2 col-sm-2">国家科技支撑计划</label>
-					<label class="form-label col-xs-2 col-sm-2">国家社科基金</label>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2010</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][0]" value="<?php echo @$info['nation_project'][0][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][0]" value="<?php echo @$info['nation_project'][1][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][0]" value="<?php echo @$info['nation_project'][2][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][0]" value="<?php echo @$info['nation_project'][3][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][0]" value="<?php echo @$info['nation_project'][4][0]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2011</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][1]" value="<?php echo @$info['nation_project'][0][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][1]" value="<?php echo @$info['nation_project'][1][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][1]" value="<?php echo @$info['nation_project'][2][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][1]" value="<?php echo @$info['nation_project'][3][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][1]" value="<?php echo @$info['nation_project'][4][1]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2012</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][2]" value="<?php echo @$info['nation_project'][0][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][2]" value="<?php echo @$info['nation_project'][1][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][2]" value="<?php echo @$info['nation_project'][2][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][2]" value="<?php echo @$info['nation_project'][3][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][2]" value="<?php echo @$info['nation_project'][4][2]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2013</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][3]" value="<?php echo @$info['nation_project'][0][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][3]" value="<?php echo @$info['nation_project'][1][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][3]" value="<?php echo @$info['nation_project'][2][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][3]" value="<?php echo @$info['nation_project'][3][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][3]" value="<?php echo @$info['nation_project'][4][3]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">2014</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][4]" value="<?php echo @$info['nation_project'][0][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][4]" value="<?php echo @$info['nation_project'][1][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][4]" value="<?php echo @$info['nation_project'][2][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][4]" value="<?php echo @$info['nation_project'][3][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][4]" value="<?php echo @$info['nation_project'][4][4]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">合计</label>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[0][5]" value="<?php echo @$info['nation_project'][0][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[1][5]" value="<?php echo @$info['nation_project'][1][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[2][5]" value="<?php echo @$info['nation_project'][2][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[3][5]" value="<?php echo @$info['nation_project'][3][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="nation_project[4][5]" value="<?php echo @$info['nation_project'][4][5]; ?>">
-					</div>
-				</div>
-			</div>
-		</div>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-2 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>承担企业委托研究课题（单项资助额度50万元以上）（项）</label>
-			<div class="col-xs-1 col-sm-2">
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">年份</label>
-					<label class="form-label col-xs-7 col-sm-7">项目数</label>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2010</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[0]" value="<?php echo @$info['business_project'][0]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2011</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[1]" value="<?php echo @$info['business_project'][1]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2012</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[2]" value="<?php echo @$info['business_project'][2]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2013</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[3]" value="<?php echo @$info['business_project'][3]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2014</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[4]" value="<?php echo @$info['business_project'][4]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">合计</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="business_project[5]" value="<?php echo @$info['business_project'][5]; ?>">
-					</div>
-				</div>
-			</div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>平台定位：</label>
+            <div class="formControls col-xs-2 col-sm-9">
+                <input type="text" class="input-text" placeholder="" name="platform_positioning" value="<?php echo @$info['platform_positioning']; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>研究方向：</label>
+            <div class="formControls col-xs-2 col-sm-9">
+                <input type="text" class="input-text" placeholder="" name="research_direction" value="<?php echo @$info['research_direction']; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-1"><span class="c-red">*</span>支撑省级以上学科名称：</label>
+            <div class="formControls col-xs-2 col-sm-9">
+                <input type="text" class="input-text" placeholder="" name="discipline" value="<?php echo @$info['discipline']; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-2 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>实验楼建筑面积（平方米）：</label>
+            <div class="formControls col-xs-2 col-sm-1">
+                <input type="text" class="input-text" placeholder="" name="building_area" value="<?php echo @$info['building_area']; ?>">
+            </div>
+            <label class="form-label col-xs-1 col-sm-2"><span class="c-red">*</span>单价十万元以上的仪器设备数量（台）：</label>
+            <div class="formControls col-xs-2 col-sm-1">
+                <input type="text" class="input-text" placeholder="" name="instrument_quantity" value="<?php echo @$info['instrument_quantity']; ?>">
+            </div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>先进仪器设备原值（万元）：</label>
+            <div class="formControls col-xs-2 col-sm-1">
+                <input type="text" class="input-text" placeholder="" name="equipment_value" value="<?php echo @$info['equipment_value']; ?>">
+            </div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>网站名称：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="site_name" value="<?php echo @$info['site_name']; ?>">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="rol cl">
+            <div class="col-xs-2 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><br /><span class="c-red">*</span>承担国家课题（项）</label>
+            <div class="col-sm-9">
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">年份</label>
+                    <label class="form-label col-xs-2 col-sm-2">863计划</label>
+                    <label class="form-label col-xs-2 col-sm-2">973计划</label>
+                    <label class="form-label col-xs-2 col-sm-2">国家自然科学基金</label>
+                    <label class="form-label col-xs-2 col-sm-2">国家科技支撑计划</label>
+                    <label class="form-label col-xs-2 col-sm-2">国家社科基金</label>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">2010</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][0]" value="<?php echo @$info['nation_project'][0][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][0]" value="<?php echo @$info['nation_project'][1][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][0]" value="<?php echo @$info['nation_project'][2][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][0]" value="<?php echo @$info['nation_project'][3][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][0]" value="<?php echo @$info['nation_project'][4][0]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">2011</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][1]" value="<?php echo @$info['nation_project'][0][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][1]" value="<?php echo @$info['nation_project'][1][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][1]" value="<?php echo @$info['nation_project'][2][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][1]" value="<?php echo @$info['nation_project'][3][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][1]" value="<?php echo @$info['nation_project'][4][1]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">2012</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][2]" value="<?php echo @$info['nation_project'][0][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][2]" value="<?php echo @$info['nation_project'][1][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][2]" value="<?php echo @$info['nation_project'][2][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][2]" value="<?php echo @$info['nation_project'][3][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][2]" value="<?php echo @$info['nation_project'][4][2]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">2013</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][3]" value="<?php echo @$info['nation_project'][0][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][3]" value="<?php echo @$info['nation_project'][1][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][3]" value="<?php echo @$info['nation_project'][2][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][3]" value="<?php echo @$info['nation_project'][3][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][3]" value="<?php echo @$info['nation_project'][4][3]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">2014</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][4]" value="<?php echo @$info['nation_project'][0][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][4]" value="<?php echo @$info['nation_project'][1][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][4]" value="<?php echo @$info['nation_project'][2][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][4]" value="<?php echo @$info['nation_project'][3][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][4]" value="<?php echo @$info['nation_project'][4][4]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">合计</label>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[0][5]" value="<?php echo @$info['nation_project'][0][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[1][5]" value="<?php echo @$info['nation_project'][1][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[2][5]" value="<?php echo @$info['nation_project'][2][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[3][5]" value="<?php echo @$info['nation_project'][3][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="nation_project[4][5]" value="<?php echo @$info['nation_project'][4][5]; ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-2 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>承担企业委托研究课题（单项资助额度50万元以上）（项）</label>
+            <div class="col-xs-1 col-sm-2">
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">年份</label>
+                    <label class="form-label col-xs-7 col-sm-7">项目数</label>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2010</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[0]" value="<?php echo @$info['business_project'][0]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2011</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[1]" value="<?php echo @$info['business_project'][1]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2012</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[2]" value="<?php echo @$info['business_project'][2]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2013</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[3]" value="<?php echo @$info['business_project'][3]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2014</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[4]" value="<?php echo @$info['business_project'][4]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">合计</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="business_project[5]" value="<?php echo @$info['business_project'][5]; ?>">
+                    </div>
+                </div>
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><span class="c-red">*</span>三大检索论文（篇）</label>
-			<div class="col-xs-1 col-sm-3">
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">年份</label>
-					<label class="form-label col-xs-1 col-sm-3">SCI</label>
-					<label class="form-label col-xs-1 col-sm-3">EI</label>
-					<label class="form-label col-xs-1 col-sm-3">ISTP</label>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">2010</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][0]" value="<?php echo @$info['index_paper'][0][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][0]" value="<?php echo @$info['index_paper'][1][0]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][0]" value="<?php echo @$info['index_paper'][2][0]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">2011</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][1]" value="<?php echo @$info['index_paper'][0][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][1]" value="<?php echo @$info['index_paper'][1][1]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][1]" value="<?php echo @$info['index_paper'][2][1]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">2012</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][2]" value="<?php echo @$info['index_paper'][0][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][2]" value="<?php echo @$info['index_paper'][1][2]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][2]" value="<?php echo @$info['index_paper'][2][2]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">2013</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][3]" value="<?php echo @$info['index_paper'][0][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][3]" value="<?php echo @$info['index_paper'][1][3]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][3]" value="<?php echo @$info['index_paper'][2][3]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">2014</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][4]" value="<?php echo @$info['index_paper'][0][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][4]" value="<?php echo @$info['index_paper'][1][4]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][4]" value="<?php echo @$info['index_paper'][2][4]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-3">合计</label>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[0][5]" value="<?php echo @$info['index_paper'][0][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[1][5]" value="<?php echo @$info['index_paper'][1][5]; ?>">
-					</div>
-					<div class="formControls col-xs-2 col-sm-3">
-						<input type="text" class="input-text" placeholder="" name="index_paper[2][5]" value="<?php echo @$info['index_paper'][2][5]; ?>">
-					</div>
-				</div>
-			</div>
+            <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><span class="c-red">*</span>三大检索论文（篇）</label>
+            <div class="col-xs-1 col-sm-3">
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">年份</label>
+                    <label class="form-label col-xs-1 col-sm-3">SCI</label>
+                    <label class="form-label col-xs-1 col-sm-3">EI</label>
+                    <label class="form-label col-xs-1 col-sm-3">ISTP</label>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">2010</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][0]" value="<?php echo @$info['index_paper'][0][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][0]" value="<?php echo @$info['index_paper'][1][0]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][0]" value="<?php echo @$info['index_paper'][2][0]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">2011</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][1]" value="<?php echo @$info['index_paper'][0][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][1]" value="<?php echo @$info['index_paper'][1][1]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][1]" value="<?php echo @$info['index_paper'][2][1]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">2012</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][2]" value="<?php echo @$info['index_paper'][0][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][2]" value="<?php echo @$info['index_paper'][1][2]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][2]" value="<?php echo @$info['index_paper'][2][2]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">2013</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][3]" value="<?php echo @$info['index_paper'][0][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][3]" value="<?php echo @$info['index_paper'][1][3]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][3]" value="<?php echo @$info['index_paper'][2][3]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">2014</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][4]" value="<?php echo @$info['index_paper'][0][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][4]" value="<?php echo @$info['index_paper'][1][4]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][4]" value="<?php echo @$info['index_paper'][2][4]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-3">合计</label>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[0][5]" value="<?php echo @$info['index_paper'][0][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[1][5]" value="<?php echo @$info['index_paper'][1][5]; ?>">
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-3">
+                        <input type="text" class="input-text" placeholder="" name="index_paper[2][5]" value="<?php echo @$info['index_paper'][2][5]; ?>">
+                    </div>
+                </div>
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>发明专利、动植物新品种、软件著作权授权（项）</label>
-			<div class="col-xs-1 col-sm-2">
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">年份</label>
-					<label class="form-label col-xs-7 col-sm-7">数量</label>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2010</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[0]" value="<?php echo @$info['project_authorization'][0]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2011</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[1]" value="<?php echo @$info['project_authorization'][1]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2012</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[2]" value="<?php echo @$info['project_authorization'][2]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2013</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[3]" value="<?php echo @$info['project_authorization'][3]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">2014</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[4]" value="<?php echo @$info['project_authorization'][4]; ?>">
-					</div>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-5 col-sm-5">合计</label>
-					<div class="formControls col-xs-2 col-sm-7">
-						<input type="text" class="input-text" placeholder="" name="project_authorization[5]" value="<?php echo @$info['project_authorization'][5]; ?>">
-					</div>
-				</div>
-			</div>
+            <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>发明专利、动植物新品种、软件著作权授权（项）</label>
+            <div class="col-xs-1 col-sm-2">
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">年份</label>
+                    <label class="form-label col-xs-7 col-sm-7">数量</label>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2010</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[0]" value="<?php echo @$info['project_authorization'][0]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2011</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[1]" value="<?php echo @$info['project_authorization'][1]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2012</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[2]" value="<?php echo @$info['project_authorization'][2]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2013</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[3]" value="<?php echo @$info['project_authorization'][3]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">2014</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[4]" value="<?php echo @$info['project_authorization'][4]; ?>">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-5 col-sm-5">合计</label>
+                    <div class="formControls col-xs-2 col-sm-7">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[5]" value="<?php echo @$info['project_authorization'][5]; ?>">
+                    </div>
+                </div>
+            </div>
 
-		</div>
+        </div>
 
-		<br /><hr />
+        <br /><hr />
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="col-xs-10 col-sm-10">
-				<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>获得国家科技三大奖情况（项）</label>
-				<div class="col-xs-1 col-sm-2">
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">年份</label>
-						<label class="form-label col-xs-7 col-sm-7">数量</label>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2010</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[0]" value="<?php echo @$info['nation_award'][0]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2011</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[1]" value="<?php echo @$info['nation_award'][1]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2012</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[2]" value="<?php echo @$info['nation_award'][2]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2013</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[3]" value="<?php echo @$info['nation_award'][3]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2014</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[4]" value="<?php echo @$info['nation_award'][4]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">合计</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="nation_award[5]" value="<?php echo @$info['nation_award'][5]; ?>">
-						</div>
-					</div>
-				</div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="col-xs-10 col-sm-10">
+                <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>获得国家科技三大奖情况（项）</label>
+                <div class="col-xs-1 col-sm-2">
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">年份</label>
+                        <label class="form-label col-xs-7 col-sm-7">数量</label>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2010</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[0]" value="<?php echo @$info['nation_award'][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2011</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[1]" value="<?php echo @$info['nation_award'][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2012</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[2]" value="<?php echo @$info['nation_award'][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2013</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[3]" value="<?php echo @$info['nation_award'][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2014</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[4]" value="<?php echo @$info['nation_award'][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">合计</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[5]" value="<?php echo @$info['nation_award'][5]; ?>">
+                        </div>
+                    </div>
+                </div>
 
-				<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>获得省部级科技一等奖情况（项）</label>
-				<div class="col-xs-1 col-sm-2">
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">年份</label>
-						<label class="form-label col-xs-7 col-sm-7">数量</label>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2010</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[0]" value="<?php echo @$info['provincial_award'][0]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2011</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[1]" value="<?php echo @$info['provincial_award'][1]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2012</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[2]" value="<?php echo @$info['provincial_award'][2]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2013</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[3]" value="<?php echo @$info['provincial_award'][3]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2014</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[4]" value="<?php echo @$info['provincial_award'][4]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">合计</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="provincial_award[5]" value="<?php echo @$info['provincial_award'][5]; ?>">
-						</div>
-					</div>
-				</div>
+                <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>获得省部级科技一等奖情况（项）</label>
+                <div class="col-xs-1 col-sm-2">
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">年份</label>
+                        <label class="form-label col-xs-7 col-sm-7">数量</label>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2010</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[0]" value="<?php echo @$info['provincial_award'][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2011</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[1]" value="<?php echo @$info['provincial_award'][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2012</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[2]" value="<?php echo @$info['provincial_award'][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2013</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[3]" value="<?php echo @$info['provincial_award'][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2014</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[4]" value="<?php echo @$info['provincial_award'][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">合计</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[5]" value="<?php echo @$info['provincial_award'][5]; ?>">
+                        </div>
+                    </div>
+                </div>
 
-				<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>科技成果转让（单项资成交金额50万元以上）（项）</label>
-				<div class="col-xs-1 col-sm-2">
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">年份</label>
-						<label class="form-label col-xs-7 col-sm-7">数量</label>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2010</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[0]" value="<?php echo @$info['transfer_achievement'][0]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2011</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[1]" value="<?php echo @$info['transfer_achievement'][1]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2012</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[2]" value="<?php echo @$info['transfer_achievement'][2]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2013</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[3]" value="<?php echo @$info['transfer_achievement'][3]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2014</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[4]" value="<?php echo @$info['transfer_achievement'][4]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">合计</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="transfer_achievement[5]" value="<?php echo @$info['transfer_achievement'][5]; ?>">
-						</div>
-					</div>
-				</div>
+                <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>科技成果转让（单项资成交金额50万元以上）（项）</label>
+                <div class="col-xs-1 col-sm-2">
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">年份</label>
+                        <label class="form-label col-xs-7 col-sm-7">数量</label>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2010</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[0]" value="<?php echo @$info['transfer_achievement'][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2011</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[1]" value="<?php echo @$info['transfer_achievement'][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2012</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[2]" value="<?php echo @$info['transfer_achievement'][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2013</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[3]" value="<?php echo @$info['transfer_achievement'][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2014</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[4]" value="<?php echo @$info['transfer_achievement'][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">合计</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="transfer_achievement[5]" value="<?php echo @$info['transfer_achievement'][5]; ?>">
+                        </div>
+                    </div>
+                </div>
 
-				<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>科技成果孵化高科技企业（家）</label>
-				<div class="col-xs-1 col-sm-2">
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">年份</label>
-						<label class="form-label col-xs-7 col-sm-7">数量</label>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2010</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[0]" value="<?php echo @$info['business_incubator'][0]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2011</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[1]" value="<?php echo @$info['business_incubator'][1]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2012</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[2]" value="<?php echo @$info['business_incubator'][2]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2013</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[3]" value="<?php echo @$info['business_incubator'][3]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">2014</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[4]" value="<?php echo @$info['business_incubator'][4]; ?>">
-						</div>
-					</div>
-					<div class="row cl">
-						<label class="form-label col-xs-5 col-sm-5">合计</label>
-						<div class="formControls col-xs-2 col-sm-7">
-							<input type="text" class="input-text" placeholder="" name="business_incubator[5]" value="<?php echo @$info['business_incubator'][5]; ?>">
-						</div>
-					</div>
-				</div>
+                <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><span class="c-red">*</span>科技成果孵化高科技企业（家）</label>
+                <div class="col-xs-1 col-sm-2">
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">年份</label>
+                        <label class="form-label col-xs-7 col-sm-7">数量</label>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2010</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[0]" value="<?php echo @$info['business_incubator'][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2011</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[1]" value="<?php echo @$info['business_incubator'][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2012</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[2]" value="<?php echo @$info['business_incubator'][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2013</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[3]" value="<?php echo @$info['business_incubator'][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">2014</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[4]" value="<?php echo @$info['business_incubator'][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-5 col-sm-5">合计</label>
+                        <div class="formControls col-xs-2 col-sm-7">
+                            <input type="text" class="input-text" placeholder="" name="business_incubator[5]" value="<?php echo @$info['business_incubator'][5]; ?>">
+                        </div>
+                    </div>
+                </div>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<br /><hr />
+        <br /><hr />
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年学委会审批开放课题：</label>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年学委会审批开放课题：</label>
 
-			<label class="form-label col-xs-1 col-sm-1">固定：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="approval_project[0]" value="<?php echo @$info['approval_project'][0]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">固定：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="approval_project[0]" value="<?php echo @$info['approval_project'][0]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">校所内客座：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="approval_project[1]" value="<?php echo @$info['approval_project'][1]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">校所内客座：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="approval_project[1]" value="<?php echo @$info['approval_project'][1]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">校所外客座：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="approval_project[2]" value="<?php echo @$info['approval_project'][2]; ?>">
-			</div>
-		</div>
+            <label class="form-label col-xs-1 col-sm-1">校所外客座：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="approval_project[2]" value="<?php echo @$info['approval_project'][2]; ?>">
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年学术交流：</label>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年学术交流：</label>
 
-			<label class="form-label col-xs-1 col-sm-2">主办国际学术会议（次）：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="academic_meeting[0]" value="<?php echo @$info['academic_meeting'][0]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-2">主办国际学术会议（次）：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="academic_meeting[0]" value="<?php echo @$info['academic_meeting'][0]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">主办国内学术会议（次）：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="academic_meeting[1]" value="<?php echo @$info['academic_meeting'][1]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">主办国内学术会议（次）：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="academic_meeting[1]" value="<?php echo @$info['academic_meeting'][1]; ?>">
+            </div>
 
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
-			<label class="form-label col-xs-1 col-sm-1">博士后（人）</label>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
+            <label class="form-label col-xs-1 col-sm-1">博士后（人）</label>
 
-			<label class="form-label col-xs-1 col-sm-1">在读：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[0][0]" value="<?php echo @$info['personnel_training'][0][0]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">在读：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[0][0]" value="<?php echo @$info['personnel_training'][0][0]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">已毕业：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[0][1]" value="<?php echo @$info['personnel_training'][0][1]; ?>">
-			</div>
-		</div>
+            <label class="form-label col-xs-1 col-sm-1">已毕业：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[0][1]" value="<?php echo @$info['personnel_training'][0][1]; ?>">
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
-			<label class="form-label col-xs-1 col-sm-1">博士生（人）</label>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
+            <label class="form-label col-xs-1 col-sm-1">博士生（人）</label>
 
-			<label class="form-label col-xs-1 col-sm-1">在读：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[1][0]" value="<?php echo @$info['personnel_training'][1][0]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">在读：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[1][0]" value="<?php echo @$info['personnel_training'][1][0]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">已毕业：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[1][1]" value="<?php echo @$info['personnel_training'][1][1]; ?>">
-			</div>
-		</div>
+            <label class="form-label col-xs-1 col-sm-1">已毕业：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[1][1]" value="<?php echo @$info['personnel_training'][1][1]; ?>">
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
-			<label class="form-label col-xs-1 col-sm-1">硕士生（人）</label>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>近五年人才培养情况：</label>
+            <label class="form-label col-xs-1 col-sm-1">硕士生（人）</label>
 
-			<label class="form-label col-xs-1 col-sm-1">在读：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[2][0]" value="<?php echo @$info['personnel_training'][2][0]; ?>">
-			</div>
+            <label class="form-label col-xs-1 col-sm-1">在读：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[2][0]" value="<?php echo @$info['personnel_training'][2][0]; ?>">
+            </div>
 
-			<label class="form-label col-xs-1 col-sm-1">已毕业：</label>
-			<div class="formControls col-xs-2 col-sm-2">
-				<input type="text" class="input-text" placeholder="" name="personnel_training[2][1]" value="<?php echo @$info['personnel_training'][2][1]; ?>">
-			</div>
-		</div>
+            <label class="form-label col-xs-1 col-sm-1">已毕业：</label>
+            <div class="formControls col-xs-2 col-sm-2">
+                <input type="text" class="input-text" placeholder="" name="personnel_training[2][1]" value="<?php echo @$info['personnel_training'][2][1]; ?>">
+            </div>
+        </div>
 
-		<br /><hr />
+        <br /><hr />
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><span class="c-red">*</span>研究队伍情况：</label>
-			<div class="col-xs-10 col-sm-10">
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">职称：</label>
-					<div class="col-xs-3 col-sm-4">
-						<label class="form-label col-xs-8 col-sm-8">固定人员</label>
-						<label class="form-label col-xs-4 col-sm-4"></label>
-						<div class="col-xs-12 col-sm-12">
-							<label class="form-label col-xs-3 col-sm-3">研究</label>
-							<label class="form-label col-xs-3 col-sm-3">技术</label>
-							<label class="form-label col-xs-3 col-sm-3">管理</label>
-							<label class="form-label col-xs-3 col-sm-3">小计</label>
-						</div>
-					</div>
-					<div class="col-xs-3 col-sm-4">
-						<label class="form-label col-xs-8 col-sm-8">兼职人员</label>
-						<label class="form-label col-xs-4 col-sm-4"></label>
-						<div class="col-xs-12 col-sm-12">
-							<label class="form-label col-xs-3 col-sm-3">校内</label>
-							<label class="form-label col-xs-3 col-sm-3">校外</label>
-							<label class="form-label col-xs-3 col-sm-3">国外</label>
-							<label class="form-label col-xs-3 col-sm-3">小计</label>
-						</div>
-					</div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><br /><br /><br /><br /><span class="c-red">*</span>研究队伍情况：</label>
+            <div class="col-xs-10 col-sm-10">
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">职称：</label>
+                    <div class="col-xs-3 col-sm-4">
+                        <label class="form-label col-xs-8 col-sm-8">固定人员</label>
+                        <label class="form-label col-xs-4 col-sm-4"></label>
+                        <div class="col-xs-12 col-sm-12">
+                            <label class="form-label col-xs-3 col-sm-3">研究</label>
+                            <label class="form-label col-xs-3 col-sm-3">技术</label>
+                            <label class="form-label col-xs-3 col-sm-3">管理</label>
+                            <label class="form-label col-xs-3 col-sm-3">小计</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-4">
+                        <label class="form-label col-xs-8 col-sm-8">兼职人员</label>
+                        <label class="form-label col-xs-4 col-sm-4"></label>
+                        <div class="col-xs-12 col-sm-12">
+                            <label class="form-label col-xs-3 col-sm-3">校内</label>
+                            <label class="form-label col-xs-3 col-sm-3">校外</label>
+                            <label class="form-label col-xs-3 col-sm-3">国外</label>
+                            <label class="form-label col-xs-3 col-sm-3">小计</label>
+                        </div>
+                    </div>
 
-					<label class="form-label col-xs-2 col-sm-2">总计：</label>
-				</div>
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">高级：</label>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[0][0]" value="<?php echo @$info['research_team'][0][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[1][0]" value="<?php echo @$info['research_team'][1][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[2][0]" value="<?php echo @$info['research_team'][2][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[3][0]" value="<?php echo @$info['research_team'][3][0]; ?>">
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[4][0]" value="<?php echo @$info['research_team'][4][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[5][0]" value="<?php echo @$info['research_team'][5][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[6][0]" value="<?php echo @$info['research_team'][6][0]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[7][0]" value="<?php echo @$info['research_team'][7][0]; ?>">
-						</div>
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="research_team[8][0]" value="<?php echo @$info['research_team'][8][0]; ?>">
-					</div>
-				</div>
+                    <label class="form-label col-xs-2 col-sm-2">总计：</label>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">高级：</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[0][0]" value="<?php echo @$info['research_team'][0][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[1][0]" value="<?php echo @$info['research_team'][1][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[2][0]" value="<?php echo @$info['research_team'][2][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[3][0]" value="<?php echo @$info['research_team'][3][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[4][0]" value="<?php echo @$info['research_team'][4][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[5][0]" value="<?php echo @$info['research_team'][5][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[6][0]" value="<?php echo @$info['research_team'][6][0]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[7][0]" value="<?php echo @$info['research_team'][7][0]; ?>">
+                        </div>
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="research_team[8][0]" value="<?php echo @$info['research_team'][8][0]; ?>">
+                    </div>
+                </div>
 
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">中级：</label>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[0][1]" value="<?php echo @$info['research_team'][0][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[1][1]" value="<?php echo @$info['research_team'][1][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[2][1]" value="<?php echo @$info['research_team'][2][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[3][1]" value="<?php echo @$info['research_team'][3][1]; ?>">
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[4][1]" value="<?php echo @$info['research_team'][4][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[5][1]" value="<?php echo @$info['research_team'][5][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[6][1]" value="<?php echo @$info['research_team'][6][1]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[7][1]" value="<?php echo @$info['research_team'][7][1]; ?>">
-						</div>
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="research_team[8][1]" value="<?php echo @$info['research_team'][8][1]; ?>">
-					</div>
-				</div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">中级：</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[0][1]" value="<?php echo @$info['research_team'][0][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[1][1]" value="<?php echo @$info['research_team'][1][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[2][1]" value="<?php echo @$info['research_team'][2][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[3][1]" value="<?php echo @$info['research_team'][3][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[4][1]" value="<?php echo @$info['research_team'][4][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[5][1]" value="<?php echo @$info['research_team'][5][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[6][1]" value="<?php echo @$info['research_team'][6][1]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[7][1]" value="<?php echo @$info['research_team'][7][1]; ?>">
+                        </div>
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="research_team[8][1]" value="<?php echo @$info['research_team'][8][1]; ?>">
+                    </div>
+                </div>
 
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">初级：</label>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[0][2]" value="<?php echo @$info['research_team'][0][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[1][2]" value="<?php echo @$info['research_team'][1][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[2][2]" value="<?php echo @$info['research_team'][2][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[3][2]" value="<?php echo @$info['research_team'][3][2]; ?>">
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[4][2]" value="<?php echo @$info['research_team'][4][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[5][2]" value="<?php echo @$info['research_team'][5][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[6][2]" value="<?php echo @$info['research_team'][6][2]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[7][2]" value="<?php echo @$info['research_team'][7][2]; ?>">
-						</div>
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="research_team[8][2]" value="<?php echo @$info['research_team'][8][2]; ?>">
-					</div>
-				</div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">初级：</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[0][2]" value="<?php echo @$info['research_team'][0][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[1][2]" value="<?php echo @$info['research_team'][1][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[2][2]" value="<?php echo @$info['research_team'][2][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[3][2]" value="<?php echo @$info['research_team'][3][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[4][2]" value="<?php echo @$info['research_team'][4][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[5][2]" value="<?php echo @$info['research_team'][5][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[6][2]" value="<?php echo @$info['research_team'][6][2]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[7][2]" value="<?php echo @$info['research_team'][7][2]; ?>">
+                        </div>
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="research_team[8][2]" value="<?php echo @$info['research_team'][8][2]; ?>">
+                    </div>
+                </div>
 
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">其他：</label>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[0][3]" value="<?php echo @$info['research_team'][0][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[1][3]" value="<?php echo @$info['research_team'][1][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[2][3]" value="<?php echo @$info['research_team'][2][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[3][3]" value="<?php echo @$info['research_team'][3][3]; ?>">
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[4][3]" value="<?php echo @$info['research_team'][4][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[5][3]" value="<?php echo @$info['research_team'][5][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[6][3]" value="<?php echo @$info['research_team'][6][3]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[7][3]" value="<?php echo @$info['research_team'][7][3]; ?>">
-						</div>
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="research_team[8][3]" value="<?php echo @$info['research_team'][8][3]; ?>">
-					</div>
-				</div>
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">其他：</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[0][3]" value="<?php echo @$info['research_team'][0][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[1][3]" value="<?php echo @$info['research_team'][1][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[2][3]" value="<?php echo @$info['research_team'][2][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[3][3]" value="<?php echo @$info['research_team'][3][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[4][3]" value="<?php echo @$info['research_team'][4][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[5][3]" value="<?php echo @$info['research_team'][5][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[6][3]" value="<?php echo @$info['research_team'][6][3]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[7][3]" value="<?php echo @$info['research_team'][7][3]; ?>">
+                        </div>
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="research_team[8][3]" value="<?php echo @$info['research_team'][8][3]; ?>">
+                    </div>
+                </div>
 
-				<div class="row cl">
-					<label class="form-label col-xs-1 col-sm-1">合计：</label>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[0][4]" value="<?php echo @$info['research_team'][0][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[1][4]" value="<?php echo @$info['research_team'][1][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[2][4]" value="<?php echo @$info['research_team'][2][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[3][4]" value="<?php echo @$info['research_team'][3][4]; ?>">
-						</div>
-					</div>
-					<div class="col-xs-4 col-sm-4">
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[4][4]" value="<?php echo @$info['research_team'][4][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[5][4]" value="<?php echo @$info['research_team'][5][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[6][4]" value="<?php echo @$info['research_team'][6][4]; ?>">
-						</div>
-						<div class="formControls col-xs-3 col-sm-3">
-							<input type="text" class="input-text" placeholder="" name="research_team[7][4]" value="<?php echo @$info['research_team'][7][4]; ?>">
-						</div>
-					</div>
-					<div class="formControls col-xs-2 col-sm-2">
-						<input type="text" class="input-text" placeholder="" name="research_team[8][4]" value="<?php echo @$info['research_team'][8][4]; ?>">
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+                <div class="row cl">
+                    <label class="form-label col-xs-1 col-sm-1">合计：</label>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[0][4]" value="<?php echo @$info['research_team'][0][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[1][4]" value="<?php echo @$info['research_team'][1][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[2][4]" value="<?php echo @$info['research_team'][2][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[3][4]" value="<?php echo @$info['research_team'][3][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[4][4]" value="<?php echo @$info['research_team'][4][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[5][4]" value="<?php echo @$info['research_team'][5][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[6][4]" value="<?php echo @$info['research_team'][6][4]; ?>">
+                        </div>
+                        <div class="formControls col-xs-3 col-sm-3">
+                            <input type="text" class="input-text" placeholder="" name="research_team[7][4]" value="<?php echo @$info['research_team'][7][4]; ?>">
+                        </div>
+                    </div>
+                    <div class="formControls col-xs-2 col-sm-2">
+                        <input type="text" class="input-text" placeholder="" name="research_team[8][4]" value="<?php echo @$info['research_team'][8][4]; ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-		<h3>二、平台负责人情况</h3>
-		<br /><hr />
-
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台负责人的情况：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="platform_respo_info"><?php echo @$info['platform_respo_info']; ?></textarea>
-			</div>
-		</div>
 
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台负责人简介、代表性成果及其产生的经济社会效益：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="platform_respo_summary"><?php echo @$info['platform_respo_summary']; ?></textarea>
-			</div>
-		</div>
+        <h3>二、平台负责人情况</h3>
+        <br /><hr />
 
-		<h3>三、平台现有研究工作的基础、水平</h3>
-		<br /><hr />
-
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>支撑学科目前在国内和国际上的影响和地位：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="influence_status"><?php echo @$info['influence_status']; ?></textarea>
-			</div>
-		</div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台负责人的情况：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="platform_respo_info"><?php echo @$info['platform_respo_info']; ?></textarea>
+            </div>
+        </div>
 
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>现有硬件条件（科研用房、仪器设备、配套设施）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="hardware_condition"><?php echo @$info['hardware_condition']; ?></textarea>
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>方向带头人简介、代表性成果及其产生的经济社会效益：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="dir_person"><?php echo @$info['dir_person']; ?></textarea>
-			</div>
-		</div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台负责人简介、代表性成果及其产生的经济社会效益：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="platform_respo_summary"><?php echo @$info['platform_respo_summary']; ?></textarea>
+            </div>
+        </div>
+
+        <h3>三、平台现有研究工作的基础、水平</h3>
+        <br /><hr />
+
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>支撑学科目前在国内和国际上的影响和地位：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="influence_status"><?php echo @$info['influence_status']; ?></textarea>
+            </div>
+        </div>
 
 
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>各研究方向科研队伍组成及结构状况：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="team_info"><?php echo @$info['team_info']; ?></textarea>
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>存在的问题及不足：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="problem"><?php echo @$info['problem']; ?></textarea>
-			</div>
-		</div>
-
-		<h3>四、平台研究方向和主要研究内容</h3>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台研究方向和主要研究内容：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="study_content"><?php echo @$info['study_content']; ?></textarea>
-			</div>
-		</div>
-
-		<h3>五、未来五年建设总目标（按填表说明二填写）</h3>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>未来五年建设总目标：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<div class="formControls col-xs-10 col-sm-10">
-				<textarea class="textarea" placeholder="" name="years_target"><?php echo @$info['years_target']; ?></textarea>
-			</div>
-		</div>
-
-		<h3>六、年度建设目标</h3>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2015年建设目标（按填表说明二填写）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
-			<div class="col-xs-1 col-sm-1"></div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][0]" value="<?php echo @$info['target'][0][0][0]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][0]" value="<?php echo @$info['target'][0][1][0]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][1]" value="<?php echo @$info['target'][0][0][1]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][1]" value="<?php echo @$info['target'][0][1][1]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][2]" value="<?php echo @$info['target'][0][0][2]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][2]" value="<?php echo @$info['target'][0][1][2]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][3]" value="<?php echo @$info['target'][0][0][3]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][3]" value="<?php echo @$info['target'][0][1][3]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][4]" value="<?php echo @$info['target'][0][0][4]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][4]" value="<?php echo @$info['target'][0][1][4]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][5]" value="<?php echo @$info['target'][0][0][5]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][5]" value="<?php echo @$info['target'][0][1][5]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][0][6]" value="<?php echo @$info['target'][0][0][6]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[0][1][6]" value="<?php echo @$info['target'][0][1][6]; ?>">
-			</div>
-		</div>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2016年建设目标（按填表说明二填写）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
-			<div class="col-xs-1 col-sm-1"></div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][0]" value="<?php echo @$info['target'][1][0][0]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][0]" value="<?php echo @$info['target'][1][1][0]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][1]" value="<?php echo @$info['target'][1][0][1]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][1]" value="<?php echo @$info['target'][1][1][1]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][2]" value="<?php echo @$info['target'][1][0][2]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][2]" value="<?php echo @$info['target'][1][1][2]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][3]" value="<?php echo @$info['target'][1][0][3]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][3]" value="<?php echo @$info['target'][1][1][3]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][4]" value="<?php echo @$info['target'][1][0][4]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][4]" value="<?php echo @$info['target'][1][1][4]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][5]" value="<?php echo @$info['target'][1][0][5]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][5]" value="<?php echo @$info['target'][1][1][5]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][0][6]" value="<?php echo @$info['target'][1][0][6]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[1][1][6]" value="<?php echo @$info['target'][1][1][6]; ?>">
-			</div>
-		</div>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2017年建设目标（按填表说明二填写）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
-			<div class="col-xs-1 col-sm-1"></div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][0]" value="<?php echo @$info['target'][2][0][0]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][0]" value="<?php echo @$info['target'][2][1][0]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][1]" value="<?php echo @$info['target'][2][0][1]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][1]" value="<?php echo @$info['target'][2][1][1]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][2]" value="<?php echo @$info['target'][2][0][2]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][2]" value="<?php echo @$info['target'][2][1][2]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][3]" value="<?php echo @$info['target'][2][0][3]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][3]" value="<?php echo @$info['target'][2][1][3]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][4]" value="<?php echo @$info['target'][2][0][4]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][4]" value="<?php echo @$info['target'][2][1][4]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][5]" value="<?php echo @$info['target'][2][0][5]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][5]" value="<?php echo @$info['target'][2][1][5]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][0][6]" value="<?php echo @$info['target'][2][0][6]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[2][1][6]" value="<?php echo @$info['target'][2][1][6]; ?>">
-			</div>
-		</div>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2018年建设目标（按填表说明二填写）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
-			<div class="col-xs-1 col-sm-1"></div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][0]" value="<?php echo @$info['target'][3][0][0]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][0]" value="<?php echo @$info['target'][3][1][0]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][1]" value="<?php echo @$info['target'][3][0][1]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][1]" value="<?php echo @$info['target'][3][1][1]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][2]" value="<?php echo @$info['target'][3][0][2]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][2]" value="<?php echo @$info['target'][3][1][2]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][3]" value="<?php echo @$info['target'][3][0][3]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][3]" value="<?php echo @$info['target'][3][1][3]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][4]" value="<?php echo @$info['target'][3][0][4]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][4]" value="<?php echo @$info['target'][3][1][4]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][5]" value="<?php echo @$info['target'][3][0][5]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][5]" value="<?php echo @$info['target'][3][1][5]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][0][6]" value="<?php echo @$info['target'][3][0][6]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[3][1][6]" value="<?php echo @$info['target'][3][1][6]; ?>">
-			</div>
-		</div>
-		<br /><hr />
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2019年建设目标（按填表说明二填写）：</label>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
-			<div class="col-xs-1 col-sm-1"></div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][0]" value="<?php echo @$info['target'][4][0][0]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][0]" value="<?php echo @$info['target'][4][1][0]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][1]" value="<?php echo @$info['target'][4][0][1]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][1]" value="<?php echo @$info['target'][4][1][1]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][2]" value="<?php echo @$info['target'][4][0][2]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][2]" value="<?php echo @$info['target'][4][1][2]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][3]" value="<?php echo @$info['target'][4][0][3]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][3]" value="<?php echo @$info['target'][4][1][3]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][4]" value="<?php echo @$info['target'][4][0][4]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][4]" value="<?php echo @$info['target'][4][1][4]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][5]" value="<?php echo @$info['target'][4][0][5]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][5]" value="<?php echo @$info['target'][4][1][5]; ?>">
-			</div>
-		</div>
-		<div class="row cl">
-			<div class="col-xs-1 col-sm-1"></div>
-			<label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][0][6]" value="<?php echo @$info['target'][4][0][6]; ?>">
-			</div>
-			<div class="formControls col-xs-4 col-sm-4">
-				<input type="text" class="input-text" placeholder="" name="target[4][1][6]" value="<?php echo @$info['target'][4][1][6]; ?>">
-			</div>
-		</div>
-		<br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>现有硬件条件（科研用房、仪器设备、配套设施）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="hardware_condition"><?php echo @$info['hardware_condition']; ?></textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>方向带头人简介、代表性成果及其产生的经济社会效益：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="dir_person"><?php echo @$info['dir_person']; ?></textarea>
+            </div>
+        </div>
 
 
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>各研究方向科研队伍组成及结构状况：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="team_info"><?php echo @$info['team_info']; ?></textarea>
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>存在的问题及不足：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="problem"><?php echo @$info['problem']; ?></textarea>
+            </div>
+        </div>
 
-		<div class="row cl">
-			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="platform_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-				<button onClick="platform_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
-			</div>
-		</div>
-	</form>
+        <h3>四、平台研究方向和主要研究内容</h3>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>平台研究方向和主要研究内容：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="study_content"><?php echo @$info['study_content']; ?></textarea>
+            </div>
+        </div>
+
+        <h3>五、未来五年建设总目标（按填表说明二填写）</h3>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>未来五年建设总目标：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="formControls col-xs-10 col-sm-10">
+                <textarea class="textarea" placeholder="" name="years_target"><?php echo @$info['years_target']; ?></textarea>
+            </div>
+        </div>
+
+        <h3>六、年度建设目标</h3>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2015年建设目标（按填表说明二填写）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][0]" value="<?php echo @$info['target'][0][0][0]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][0]" value="<?php echo @$info['target'][0][1][0]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][1]" value="<?php echo @$info['target'][0][0][1]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][1]" value="<?php echo @$info['target'][0][1][1]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][2]" value="<?php echo @$info['target'][0][0][2]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][2]" value="<?php echo @$info['target'][0][1][2]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][3]" value="<?php echo @$info['target'][0][0][3]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][3]" value="<?php echo @$info['target'][0][1][3]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][4]" value="<?php echo @$info['target'][0][0][4]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][4]" value="<?php echo @$info['target'][0][1][4]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][5]" value="<?php echo @$info['target'][0][0][5]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][5]" value="<?php echo @$info['target'][0][1][5]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][0][6]" value="<?php echo @$info['target'][0][0][6]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[0][1][6]" value="<?php echo @$info['target'][0][1][6]; ?>">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2016年建设目标（按填表说明二填写）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][0]" value="<?php echo @$info['target'][1][0][0]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][0]" value="<?php echo @$info['target'][1][1][0]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][1]" value="<?php echo @$info['target'][1][0][1]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][1]" value="<?php echo @$info['target'][1][1][1]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][2]" value="<?php echo @$info['target'][1][0][2]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][2]" value="<?php echo @$info['target'][1][1][2]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][3]" value="<?php echo @$info['target'][1][0][3]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][3]" value="<?php echo @$info['target'][1][1][3]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][4]" value="<?php echo @$info['target'][1][0][4]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][4]" value="<?php echo @$info['target'][1][1][4]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][5]" value="<?php echo @$info['target'][1][0][5]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][5]" value="<?php echo @$info['target'][1][1][5]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][0][6]" value="<?php echo @$info['target'][1][0][6]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[1][1][6]" value="<?php echo @$info['target'][1][1][6]; ?>">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2017年建设目标（按填表说明二填写）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][0]" value="<?php echo @$info['target'][2][0][0]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][0]" value="<?php echo @$info['target'][2][1][0]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][1]" value="<?php echo @$info['target'][2][0][1]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][1]" value="<?php echo @$info['target'][2][1][1]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][2]" value="<?php echo @$info['target'][2][0][2]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][2]" value="<?php echo @$info['target'][2][1][2]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][3]" value="<?php echo @$info['target'][2][0][3]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][3]" value="<?php echo @$info['target'][2][1][3]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][4]" value="<?php echo @$info['target'][2][0][4]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][4]" value="<?php echo @$info['target'][2][1][4]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][5]" value="<?php echo @$info['target'][2][0][5]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][5]" value="<?php echo @$info['target'][2][1][5]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][0][6]" value="<?php echo @$info['target'][2][0][6]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[2][1][6]" value="<?php echo @$info['target'][2][1][6]; ?>">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2018年建设目标（按填表说明二填写）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][0]" value="<?php echo @$info['target'][3][0][0]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][0]" value="<?php echo @$info['target'][3][1][0]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][1]" value="<?php echo @$info['target'][3][0][1]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][1]" value="<?php echo @$info['target'][3][1][1]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][2]" value="<?php echo @$info['target'][3][0][2]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][2]" value="<?php echo @$info['target'][3][1][2]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][3]" value="<?php echo @$info['target'][3][0][3]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][3]" value="<?php echo @$info['target'][3][1][3]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][4]" value="<?php echo @$info['target'][3][0][4]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][4]" value="<?php echo @$info['target'][3][1][4]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][5]" value="<?php echo @$info['target'][3][0][5]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][5]" value="<?php echo @$info['target'][3][1][5]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][0][6]" value="<?php echo @$info['target'][3][0][6]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[3][1][6]" value="<?php echo @$info['target'][3][1][6]; ?>">
+            </div>
+        </div>
+        <br /><hr />
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-10 col-sm-10" style="text-align: left"><span class="c-red">*</span>2019年建设目标（按填表说明二填写）：</label>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标项</label>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>具体目标</label>
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-3 col-sm-3"><span class="c-red">*</span>举措</label>
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标一</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][0]" value="<?php echo @$info['target'][4][0][0]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][0]" value="<?php echo @$info['target'][4][1][0]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标二</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][1]" value="<?php echo @$info['target'][4][0][1]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][1]" value="<?php echo @$info['target'][4][1][1]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标三</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][2]" value="<?php echo @$info['target'][4][0][2]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][2]" value="<?php echo @$info['target'][4][1][2]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标四</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][3]" value="<?php echo @$info['target'][4][0][3]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][3]" value="<?php echo @$info['target'][4][1][3]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标五</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][4]" value="<?php echo @$info['target'][4][0][4]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][4]" value="<?php echo @$info['target'][4][1][4]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标六</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][5]" value="<?php echo @$info['target'][4][0][5]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][5]" value="<?php echo @$info['target'][4][1][5]; ?>">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-1 col-sm-1"></div>
+            <label class="form-label col-xs-1 col-sm-1"><span class="c-red">*</span>目标七</label>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][0][6]" value="<?php echo @$info['target'][4][0][6]; ?>">
+            </div>
+            <div class="formControls col-xs-4 col-sm-4">
+                <input type="text" class="input-text" placeholder="" name="target[4][1][6]" value="<?php echo @$info['target'][4][1][6]; ?>">
+            </div>
+        </div>
+        <br /><hr />
+
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="platform_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+                <button onClick="platform_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+                <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
 </article>
 
 <!--_footer 作为公共模版分离出去-->
@@ -1440,89 +1440,89 @@
 <script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
 $(function(){
-	$('.skin-minimal input').iCheck({
-		checkboxClass: 'icheckbox-blue',
-		radioClass: 'iradio-blue',
-		increaseArea: '20%'
-	});
+    $('.skin-minimal input').iCheck({
+        checkboxClass: 'icheckbox-blue',
+        radioClass: 'iradio-blue',
+        increaseArea: '20%'
+    });
 
 
-	$list = $("#fileList"),
-	$btn = $("#btn-star"),
-	state = "pending",
-	uploader;
+    $list = $("#fileList"),
+    $btn = $("#btn-star"),
+    state = "pending",
+    uploader;
 
-	var uploader = WebUploader.create({
-		auto: true,
-		swf: '/static/admin/lib/webuploader/0.1.5/Uploader.swf',
+    var uploader = WebUploader.create({
+        auto: true,
+        swf: '/static/admin/lib/webuploader/0.1.5/Uploader.swf',
 
-		// 文件接收服务端。
-		server: 'fileupload.php',
+        // 文件接收服务端。
+        server: 'fileupload.php',
 
-		// 选择文件的按钮。可选。
-		// 内部根据当前运行是创建，可能是input元素，也可能是flash.
-		pick: '#filePicker',
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#filePicker',
 
-		// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-		resize: false,
-		// 只允许选择图片文件。
-		accept: {
-			title: 'Images',
-			extensions: 'gif,jpg,jpeg,bmp,png',
-			mimeTypes: 'image/*'
-		}
-	});
-	uploader.on( 'fileQueued', function( file ) {
-		var $li = $(
-			'<div id="' + file.id + '" class="item">' +
-				'<div class="pic-box"><img></div>'+
-				'<div class="info">' + file.name + '</div>' +
-				'<p class="state">等待上传...</p>'+
-			'</div>'
-		),
-		$img = $li.find('img');
-		$list.append( $li );
+        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+        resize: false,
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    uploader.on( 'fileQueued', function( file ) {
+        var $li = $(
+            '<div id="' + file.id + '" class="item">' +
+                '<div class="pic-box"><img></div>'+
+                '<div class="info">' + file.name + '</div>' +
+                '<p class="state">等待上传...</p>'+
+            '</div>'
+        ),
+        $img = $li.find('img');
+        $list.append( $li );
 
-		// 创建缩略图
-		// 如果为非图片文件，可以不用调用此方法。
-		// thumbnailWidth x thumbnailHeight 为 100 x 100
-		uploader.makeThumb( file, function( error, src ) {
-			if ( error ) {
-				$img.replaceWith('<span>不能预览</span>');
-				return;
-			}
+        // 创建缩略图
+        // 如果为非图片文件，可以不用调用此方法。
+        // thumbnailWidth x thumbnailHeight 为 100 x 100
+        uploader.makeThumb( file, function( error, src ) {
+            if ( error ) {
+                $img.replaceWith('<span>不能预览</span>');
+                return;
+            }
 
-			$img.attr( 'src', src );
-		}, thumbnailWidth, thumbnailHeight );
-	});
-	// 文件上传过程中创建进度条实时显示。
-	uploader.on( 'uploadProgress', function( file, percentage ) {
-		var $li = $( '#'+file.id ),
-			$percent = $li.find('.progress-box .sr-only');
+            $img.attr( 'src', src );
+        }, thumbnailWidth, thumbnailHeight );
+    });
+    // 文件上传过程中创建进度条实时显示。
+    uploader.on( 'uploadProgress', function( file, percentage ) {
+        var $li = $( '#'+file.id ),
+            $percent = $li.find('.progress-box .sr-only');
 
-		// 避免重复创建
-		if ( !$percent.length ) {
-			$percent = $('<div class="progress-box"><span class="progress-bar radius"><span class="sr-only" style="width:0%"></span></span></div>').appendTo( $li ).find('.sr-only');
-		}
-		$li.find(".state").text("上传中");
-		$percent.css( 'width', percentage * 100 + '%' );
-	});
+        // 避免重复创建
+        if ( !$percent.length ) {
+            $percent = $('<div class="progress-box"><span class="progress-bar radius"><span class="sr-only" style="width:0%"></span></span></div>').appendTo( $li ).find('.sr-only');
+        }
+        $li.find(".state").text("上传中");
+        $percent.css( 'width', percentage * 100 + '%' );
+    });
 
-	// 文件上传成功，给item添加成功class, 用样式标记上传成功。
-	uploader.on( 'uploadSuccess', function( file ) {
-		$( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
-	});
+    // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+    uploader.on( 'uploadSuccess', function( file ) {
+        $( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
+    });
 
-	// 文件上传失败，显示上传出错。
-	uploader.on( 'uploadError', function( file ) {
-		$( '#'+file.id ).addClass('upload-state-error').find(".state").text("上传出错");
-	});
+    // 文件上传失败，显示上传出错。
+    uploader.on( 'uploadError', function( file ) {
+        $( '#'+file.id ).addClass('upload-state-error').find(".state").text("上传出错");
+    });
 
-	// 完成上传完了，成功或者失败，先删除进度条。
-	uploader.on( 'uploadComplete', function( file ) {
-		$( '#'+file.id ).find('.progress-box').fadeOut();
-	});
-	uploader.on('all', function (type) {
+    // 完成上传完了，成功或者失败，先删除进度条。
+    uploader.on( 'uploadComplete', function( file ) {
+        $( '#'+file.id ).find('.progress-box').fadeOut();
+    });
+    uploader.on('all', function (type) {
         if (type === 'startUpload') {
             state = 'uploading';
         } else if (type === 'stopUpload') {
@@ -1546,7 +1546,7 @@ $(function(){
         }
     });
 
-	var ue = UE.getEditor('editor');
+    var ue = UE.getEditor('editor');
 
 });
 </script>
