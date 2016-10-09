@@ -257,7 +257,7 @@
                 <div class="row cl">
                     <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="project_authorization[0][0]"></select></label>
                     <div class="formControls col-xs-2 col-sm-7">
-                        <input type="text" class="input-text" placeholder="" name="project_authorization[0][1]" value="<?php echo @project_authorization[0][1]; ?>">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[0][1]" value="<?php echo @$info['project_authorization'][0][1]; ?>">
                     </div>
                 </div>
                 <?php if(isset($info['project_authorization'])) for($i = 1; $i < count($info['project_authorization']); $i++) {?>
@@ -265,7 +265,7 @@
                 <div class="row cl">
                     <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="project_authorization[<?php echo $i; ?>][0]"></select></label>
                     <div class="formControls col-xs-2 col-sm-7">
-                        <input type="text" class="input-text" placeholder="" name="project_authorization[<?php echo $i; ?>][1]" value="<?php echo @project_authorization[$i][1]; ?>">
+                        <input type="text" class="input-text" placeholder="" name="project_authorization[<?php echo $i; ?>][1]" value="<?php echo @$info['project_authorization'][$i][1]; ?>">
                     </div>
                 </div>
                 <?php } ?>
