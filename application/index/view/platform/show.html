@@ -287,14 +287,14 @@
                     <div class="row cl">
                         <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="nation_award[0][0]"></select></label>
                         <div class="formControls col-xs-2 col-sm-7">
-                            <input type="text" class="input-text" placeholder="" name="nation_award[0][1]" value="<?php echo @info['nation_award'][0][1]; ?>">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[0][1]" value="<?php echo @$info['nation_award'][0][1]; ?>">
                         </div>
                     </div>
                     <?php if(isset($info['nation_award'])) for($i = 1; $i < count($info['nation_award']); $i++) { ?>
                     <div class="row cl">
                         <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="nation_award[<?php echo $i; ?>][0]"></select></label>
                         <div class="formControls col-xs-2 col-sm-7">
-                            <input type="text" class="input-text" placeholder="" name="nation_award[<?php echo $i; ?>][1]" value="<?php echo @info['nation_award'][$i][1]; ?>">
+                            <input type="text" class="input-text" placeholder="" name="nation_award[<?php echo $i; ?>][1]" value="<?php echo @$info['nation_award'][$i][1]; ?>">
                         </div>
                     </div>
                     <?php } ?>
@@ -309,14 +309,14 @@
                     <div class="row cl">
                         <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="provincial_award[0][0]"></select></label>
                         <div class="formControls col-xs-2 col-sm-7">
-                            <input type="text" class="input-text" placeholder="" name="provincial_award[0][1]" value="<?php echo @info['provincial_award'][0][1]; ?>">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[0][1]" value="<?php echo @$info['provincial_award'][0][1]; ?>">
                         </div>
                     </div>
                     <?php if(isset($info['provincial_award'])) for($i = 1; $i < count($info['provincial_award']); $i++) { ?>
                     <div class="row cl">
                         <label class="form-label col-xs-5 col-sm-5"><select class="year-list" name="provincial_award[<?php echo $i; ?>][0]"></select></label>
                         <div class="formControls col-xs-2 col-sm-7">
-                            <input type="text" class="input-text" placeholder="" name="provincial_award[<?php echo $i; ?>][1]" value="<?php echo @info['provincial_award'][$i][1]; ?>">
+                            <input type="text" class="input-text" placeholder="" name="provincial_award[<?php echo $i; ?>][1]" value="<?php echo @$info['provincial_award'][$i][1]; ?>">
                         </div>
                     </div>
                     <?php } ?>
