@@ -1,13 +1,5 @@
 
-
-CREATE TABLE IF NOT EXISTS `gl_access` (
-  `role_id` smallint(6) unsigned NOT NULL,
-  `node_id` smallint(6) unsigned NOT NULL,
-  `level` tinyint(1) NOT NULL,
-  `module` varchar(50) DEFAULT NULL,
-  KEY `groupId` (`role_id`),
-  KEY `nodeId` (`node_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+DROP TABLE `gl_node`, `gl_user`, `gl_role`, `gl_node_role`;
 
 CREATE TABLE IF NOT EXISTS `gl_node` (
   `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
@@ -33,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `gl_user` (
   `nickname` varchar(255) DEFAULT '',
   `company` varchar(255) DEFAULT '',
   `info` varchar(2048) DEFAULT '',
+  `role` int DEFAULT '9',
   `login_ip` varchar(63) DEFAULT '0.0.0.0',
   `login_time` bigint DEFAULT 0,
   `login_times` int DEFAULT 0,
@@ -52,19 +45,37 @@ CREATE TABLE IF NOT EXISTS `gl_role` (
   KEY `status` (`status`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-INSERT INTO `gl_role` (name, pid, status, ) VALUES ()
 
-CREATE TABLE IF NOT EXISTS `gl_role_user` (
-  `role_id` mediumint(9) unsigned DEFAULT NULL,
-  `user_id` int DEFAULT 0,
-  KEY `group_id` (`role_id`),
-  KEY `user_id` (`user_id`)
+CREATE TABLE IF NOT EXISTS `gl_node_role` (
+  `node_id` int DEFAULT 0,
+  `role_id` mediumint(9) unsigned DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `gl_user` (`username`, `password`, `nickname`, `company`, `status`) VALUES ('admin', '57ccf1f880259458d29aaf29fdb4d284', 'Admin', 'Provincial Education Department', 1);
+
+INSERT INTO `gl_user` (`username`, `password`, `nickname`, `company`, `role`, `status`) VALUES ('admin', '57ccf1f880259458d29aaf29fdb4d284', 'Admin', '1', 1, 1);
 INSERT INTO `gl_role` (`name`, `pid`, `status`, `remark`) VALUES ('管理员', 0, 1, '');
+INSERT INTO `gl_node` (`name`, `status`, `remark`) VALUES ('平台录入', 1, '录入平台信息');
+INSERT INTO `gl_node` (`name`, `status`, `remark`) VALUES ('平台审核', 1, '审核平台信息');
+INSERT INTO `gl_node` (`name`, `status`, `remark`) VALUES ('账户审核', 1, '审核账户信息');
 INSERT INTO `gl_role_user` VALUES (1, 1);
+INSERT INTO `gl_node_role` VALUES (1, 1), (2, 1), (3, 1);
+
+
+
+CREATE TABLE `gl_company` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `number` varchar(63) NOT NULL DEFAULT '',
+  `name` varchar(63) NOT NULL DEFAULT '',
+  `status` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+INSERT INTO `gl_company` VALUES (1,'','沈阳航空航天大学',1),(2,'','大连交通大学',1),(3,'','辽宁大学',1),(4,'','辽宁石油化工大学',1),(5,'','沈阳师范大学',1),(6,'','沈阳工程学院',1),(7,'','大连大学',1),(8,'','辽宁科技学院',1),(9,'','沈阳工业大学',1),(10,'','辽宁交通专科',1),(11,'','辽宁何氏',1),(12,'','辽宁机电职业技术',1),(13,'','沈阳大学',1),(14,'','辽东学院',1),(15,'','辽宁对外经贸学院',1),(16,'','辽宁工程职业学院',1),(17,'','沈阳药科大学',1),(18,'','渤海大学',1),(19,'','锦州师范专科学校',1),(20,'','东北大学',1),(21,'','大连民族大学',1),(22,'','沈阳化工大学',1),(23,'','辽宁职业学院',1),(24,'','辽宁装备制造职业技术学院',1),(25,'','鲁迅美术学院',1),(26,'','中国医科大学',1),(27,'','沈阳职业技术学院',1),(28,'','大连工业大学',1),(29,'','沈阳建筑大学',1),(30,'','辽宁科技大学',1),(31,'','辽宁警察学院',1),(32,'','辽宁林业职业技术学院',1),(33,'','大连海事大学',1),(34,'','大连民族学院',1),(35,'','大连理工大学',1),(36,'','大连海洋大学',1),(37,'','沈阳理工大学',1),(38,'','辽宁医学院',1),(39,'','辽宁中医药大学',1),(40,'','辽宁工业大学',1),(41,'','辽宁工程技术大学',1),(42,'','大连医科大学',1);
+
+
+
+
 
 
 

@@ -15,3 +15,10 @@ function password_encrypt($password)
     $__SALT__ = 'netcon';
     return md5($password.$__SALT__);
 }
+
+
+
+function get_power($id) {
+    $role_user = app\index\model\Role_user::get(['user_id' => $id]);
+    return $role_user->role_id;
+}

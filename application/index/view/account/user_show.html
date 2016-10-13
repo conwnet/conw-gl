@@ -1,0 +1,98 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<LINK rel="Bookmark" href="/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/static/admin/lib/html5.js"></script>
+<script type="text/javascript" src="/static/admin/lib/respond.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/PIE_IE678.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/lib/Hui-iconfont/1.0.7/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/lib/icheck/icheck.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/static/admin/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>平台录入</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+<div class="container">
+
+<h2 style="text-align: center">编辑{$user.username}信息</h2>
+<article class="page-container">
+
+    <form method="post" class="form form-horizontal" action="{:url('Account/user_update')}">
+
+        <hr /><br>
+        <h2>基本信息：</h2>
+        <input type="hidden" name="user_id" value="{$user.id}" />
+        <h4>昵称：</h4><input type="text" class="input-text" name="nickname" value="{$user.nickname}" />
+        <h4>说明：</h4><input type="text" class="input-text" name="info" value="{$user.info}" />
+        <h4>学校：</h4>
+        <select class="input-text" name="company">
+            <option value="0">请选择学校</option>
+            {foreach $companys as $company}
+                <option value="{$company.id}" <?php if($company['id'] == $user['company']) echo 'selected="selected"'; ?> >{$company.name}</option>
+            {/foreach}
+        </select>
+        <h4>新密码：</h4><input type="password" class="input-text" name="password" placeholder="不修改请留空" />
+        <h4>确认新密码：</h4><input type="password" class="input-text" name="repassword" placeholder="不修改请留空" " />
+
+        <?php if(input('session.role') < $user['role']) { ?>
+        <h4>状态：</h4>
+        <input type="radio" name="status" value="0" <?php if($user['status'] == 0) echo 'checked="checked"'; ?>> 停用&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="status" value="1" <?php if($user['status'] == 1) echo 'checked="checked"'; ?>> 启用
+        <h2>角色选择：</h2>
+        {foreach $roles as $role}
+        <h4><input type="radio" name="role" value="{$role.id}" <?php if($role['id'] == $user['role']) echo 'checked="checked"' ?> /> {$role.name}, {$role.remark}</h4>
+        {/foreach}
+        <hr />
+        <?php } ?>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                <button onClick="platform_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+                <!-- <button onClick="platform_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button> -->
+                <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+        </div>
+    </form>
+
+
+</article>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/static/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="/static/admin/lib/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/static/admin/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="/static/admin/static/h-ui.admin/js/H-ui.admin.js"></script>
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/admin/lib/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="/static/admin/lib/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+<script type="text/javascript" src="/static/admin/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

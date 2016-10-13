@@ -15,9 +15,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <!-- 页面基本设置禁止随意更改 -->
 <!-- 基础CSS类库可随意更改 -->
-    
+
 <link rel="stylesheet" type="text/css" href="/static/index/css/less.css">
 <link rel="stylesheet" type="text/css" href="/static/index/css/basic.css">
+<script src="/static/index/js/jquery.min.js"></script>
+<script src="/static/index/js/bootstrap.min.js"></script>
 <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="/static/index/css/ie8.css">
     <![endif]-->
@@ -37,15 +39,12 @@
         <img src="/static/index/images/log_1.jpg" />
     </div>
     <div style="float:right;margin-top: -34px;width: 360px;font-size: 12px;">
-        <span>首页</span>
-        <span>|</span>
-        <span>登录帮助</span>
     </div>
   </div>
     <div class="login-topBg">
-      <div class="login-topBg1">
+      <div class="login-topBg1" >
         
-        <div class="login-topStyle" >
+        <div class="login-topStyle">
               <form action="{:url('index/check')}" method="post">
             <!--在点击注册时出现样式login-topStyle3登录框，而login-topStyle2则消失-->
             <div class="login-topStyle3" id="loginStyle" style="margin-top: 75px;">
@@ -60,7 +59,7 @@
             </div>
             <div class="login_reme">
               <input type="checkbox">
-              <a class="reme1">记住账号</a> <a class="reme2" href="password.html">忘记密码?</a> </div>
+              <a class="reme1">记住账号</a> <a class="reme2" href="{:url('index/register')}">注册帐号</a> </div>
             <span class="error_xinxi" style="display:none;">您输入的密码不正确，请重新输入</span> <input type="submit" class="btnStyle btn-register" value="立即登录"></input> </div>
             </form>
         </div>

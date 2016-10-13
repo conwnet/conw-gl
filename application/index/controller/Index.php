@@ -5,6 +5,7 @@ use app\index\model\User;
 use think\View;
 use think\Session;
 use think\Validate;
+use app\index\model;
 
 class Index extends Controller
 {
@@ -30,8 +31,11 @@ class Index extends Controller
             $user = User::get(['username'=>input('post.username')]);
             if ($user == NULL)
                 return $this->error('帐号不存在！', url('index/index'));
+            if($user->status == 0)
+                return $this->error('帐号审核中！', url('index/index'));
             if(password_encrypt(input('post.password')) == $user->password) {
                 Session::set('id', $user->id);
+                Session::set('role', $user->role);
                 Session::set('login_ip', $user->login_ip);
                 Session::set('login_time', $user->login_time);
                 Session::set('login_times', $user->login_times + 1);
@@ -45,6 +49,37 @@ class Index extends Controller
         } else {
             return $this->error('帐号密码输入不合法！', url('index/index'));
         }
+    }
+
+    public function register() {
+        $companys = model\Company::select();
+        $this->assign('companys', $companys);
+        $roles = model\Role::select();
+        $this->assign('roles', $roles);
+        return $this->fetch();
+    }
+
+    public function user_add() {
+        $username = input('post.username');
+        $password = input('post.password');
+        $repassword = input('post.repassword');
+        $company = input('post.company');
+        $role = input('post.role');
+        if($role == 1) return $this->error('别闹...');
+        if(!($username && $password && $repassword && $company && $role))
+            return $this->error('请完整填写信息');
+        if(strlen($password) < 3) return $this->error('密码长度太短！');
+        if($password != $repassword) return $this->error('两次输入密码不匹配！');
+        if(model\User::get(['username' => $username])) return $this->error('用户名已存在！');
+        $user = new model\User();
+        $user->username = $username;
+        $user->password = password_encrypt($password);
+        $user->company = $company;
+        $user->status = 0;
+        $user->role = $role;
+        $user->create_time = time();
+        $user->save();
+        return $this->success('注册成功！');
     }
 
     public function logout() {
